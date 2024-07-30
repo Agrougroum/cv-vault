@@ -1,0 +1,9 @@
+/// @group Layout
+
+/// The baseline grid value. It's 8 pixels
+$layout-spacing: 8px !default;
+
+/// Return a value which is multiplication of the baseline grid
+@function layout-spacing($multiplier: 1) {
+    @return $layout-spacing * $multiplier;
+}

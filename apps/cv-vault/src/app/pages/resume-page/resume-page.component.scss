@@ -1,3 +1,23 @@
-:host {
-  display: block;
+@use '../../shared/css/css-tools/' as tools;
+
+.resume {
+  display: flex;
+  height: 100vh;
+  // padding: tools.layout-spacing(50);
+  // background-color: var(--main-background);
+
+
+  &__left-panel {
+    display: flex;
+    height: 100%;
+    width: 45%;
+    // justify-content: stretch;
+  }
+
+  &__right-panel {
+    display: flex;
+    height: 100%;
+    width: 55%;
+    // justify-content: stretch;
+  }
 }
