@@ -1,1 +1,4 @@
+// The tools are forwarded to be used throughout the application.
+// base-overide and colors on the other hand are injected in styles.scss
+
 @forward './css-tools';

@@ -2,9 +2,11 @@
 
 .resume {
   display: flex;
+  box-sizing: border-box;
   height: 100vh;
-  // padding: tools.layout-spacing(50);
-  // background-color: var(--main-background);
+  padding: 6rem;
+  column-gap: tools.layout-spacing(3);
+
 
 
   &__left-panel {
