@@ -1,0 +1,110 @@
+/// Media Queries
+/// Mixins and function to support media queries
+/// @group Layout
+///
+/// @content
+////
+/// /// XXSmall device breakpoint
+$layout-breakpoint-xxs: 360px !default;
+
+/// XSmall device breakpoint
+$layout-breakpoint-xs: 600px !default;
+
+/// Small device breakpoint
+$layout-breakpoint-sm: 768px !default;
+
+/// Medium device breakpoint
+$layout-breakpoint-md: 960px !default;
+
+/// Large device breakpoint
+$layout-breakpoint-lg: 1280px !default;
+
+/// XXSmall devices. Below 360px
+@mixin cvv-media--xxs() {
+    @media (max-width: ($layout-breakpoint-xxs - 1)) {
+        @content;
+    }
+}
+
+/// Greater then XXSmall devices. Above 360px
+@mixin cvv-media--gt-xxs() {
+    @media (min-width: $layout-breakpoint-xs) {
+        @content;
+    }
+}
+
+/// XSmall devices. Below 600px
+@mixin cvv-media--xs() {
+    @media (max-width: ($layout-breakpoint-xs - 1)) {
+        @content;
+    }
+}
+
+/// Greater then small devices. Above 600px
+@mixin cvv-media--gt-xs() {
+    @media (min-width: $layout-breakpoint-xs) {
+        @content;
+    }
+}
+
+/// Between xsmall and small. (600px - 767px)
+@mixin cvv-media--sm() {
+    @media (min-width: $layout-breakpoint-xs) and (max-width: ($layout-breakpoint-sm - 1)) {
+        @content;
+    }
+}
+
+/// Greater then small devices. Above 768px.
+@mixin cvv-media--gt-sm() {
+    @media (min-width: $layout-breakpoint-sm) {
+        @content;
+    }
+}
+
+/// Between small and medium. (768px - 959px)
+@mixin cvv-media--md() {
+    @media (min-width: $layout-breakpoint-sm) and (max-width: ($layout-breakpoint-md - 1)) {
+        @content;
+    }
+}
+
+/// Greater then medium devices. Above 960px.
+@mixin cvv-media--gt-md() {
+    @media (min-width: $layout-breakpoint-md) {
+        @content;
+    }
+}
+
+/// Between medium and large. (960px - 1279px).
+@mixin cvv-media--lg() {
+    @media (min-width: $layout-breakpoint-md) and (max-width: ($layout-breakpoint-lg - 1)) {
+        @content;
+    }
+}
+
+/// Greater then large devices. Above 1280px.
+@mixin cvv-media--gt-lg() {
+    @media (min-width: $layout-breakpoint-lg) {
+        @content;
+    }
+}
+
+/// Between large and extra large. (1280px - 1439px).
+@mixin cvv-media--xl() {
+    @media (min-width: $layout-breakpoint-lg) and (max-width: ($layout-breakpoint-xl - 1)) {
+        @content;
+    }
+}
+
+/// Greater then extra large devices. Above 1440px.
+@mixin cvv-media--gt-xl() {
+    @media (min-width: $layout-breakpoint-xl) {
+        @content;
+    }
+}
+
+@mixin cvv-media--landscape() {
+    @media screen and (max-height: ($layout-breakpoint-xs - 1)) and (orientation: landscape) {
+        @content;
+    }
+}

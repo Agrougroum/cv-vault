@@ -1,6 +1,14 @@
+@use '../../../../shared/css/css-tools' as tools;
+
 :host {
     display: block;
     width: 100%;
 
-    // background-color: deeppink;
+    .main-intro {
+        &__title {
+            @include tools.cvv-media--gt-sm() {
+                font-size: 2.75rem;
+            }
+        }
+    }
 }

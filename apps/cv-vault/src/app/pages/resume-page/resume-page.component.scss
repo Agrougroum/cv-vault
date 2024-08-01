@@ -6,20 +6,34 @@
   height: 100vh;
   padding: 6rem;
   column-gap: tools.layout-spacing(3);
+  flex-direction: column;
 
+
+  @include tools.cvv-media--gt-lg() {
+    margin: 0 tools.layout-spacing(4);
+  }
+
+
+  @include tools.cvv-media--gt-md() {
+    flex-direction: row;
+
+    &__left-panel {
+      height: 100%;
+      width: 45%;
+    }
+
+    &__right-panel {
+      height: 100%;
+      width: 55%;
+    }
+  }
 
 
   &__left-panel {
     display: flex;
-    height: 100%;
-    width: 45%;
-    // justify-content: stretch;
   }
 
   &__right-panel {
     display: flex;
-    height: 100%;
-    width: 55%;
-    // justify-content: stretch;
   }
 }
