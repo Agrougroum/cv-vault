@@ -3,21 +3,20 @@
 .resume {
   display: flex;
   box-sizing: border-box;
-  height: 100vh;
-  padding: 6rem;
+  padding: tools.layout-spacing(15);
+  padding-top: 0;
   column-gap: tools.layout-spacing(3);
   flex-direction: column;
-
-
-  @include tools.cvv-media--gt-lg() {
-    margin: 0 tools.layout-spacing(4);
-  }
+  max-width: 1280px;
+  margin: 0 auto;
 
 
   @include tools.cvv-media--gt-md() {
     flex-direction: row;
 
     &__left-panel {
+      position: sticky;
+      top: 0;
       height: 100%;
       width: 45%;
     }
@@ -31,10 +30,12 @@
 
   &__left-panel {
     display: flex;
+    padding-top: tools.layout-spacing(15);
   }
 
   &__right-panel {
     display: flex;
+    padding-top: tools.layout-spacing(15);
   }
 
   &__cursor-halo {
