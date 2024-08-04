@@ -10,13 +10,21 @@
   gap: tools.layout-spacing(2);
   cursor: pointer;
   margin-top: tools.layout-spacing(3);
+  padding: tools.layout-spacing(2) tools.layout-spacing(3);
+  border-radius: tools.layout-spacing(1);
+  transition: background-color .15s cubic-bezier(.4, 0, .2, 1);
+  color: rgb(var(--body-color) / var(--base-opacity));
 
   &__period {
     grid-column: span 2 / span 2;
     margin: tools.layout-spacing(1) 0;
-    color: var(--discrete-color);
+    color: rgb(var(--discrete-color) / var(--base-opacity));
     font-size: .75rem;
     font-weight: 600;
+  }
+
+  &__title {
+    color: rgb(var(--title-color) / var(--base-opacity));
   }
 
   &__content {
@@ -25,5 +33,17 @@
 
   &__description {
     font-size: .875rem;
+  }
+
+  &:hover {
+    --base-opacity: 1; // var is scoped to the hovered element
+    background-color: rgb(var(--fading-background));
+
+    .experience-card {
+      &__title {
+        color: rgb(var(--electric-highlight));
+      }
+    }
+
   }
 }

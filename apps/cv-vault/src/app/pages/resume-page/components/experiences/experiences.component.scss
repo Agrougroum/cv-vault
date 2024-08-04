@@ -1,3 +1,7 @@
 :host {
   display: block;
 }
+
+.experiences__list:hover {
+  --base-opacity: .5; // var is scoped to list elements and fades them on hover
+}

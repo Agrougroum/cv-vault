@@ -3,7 +3,7 @@
         {{ experience.period }}
     </header>
     <div class="experience-card__content">
-        <h3>{{ experience.title }}</h3>
+        <h3 class="experience-card__title">{{ experience.title }}</h3>
         <p class="experience-card__description">{{ experience.mainDescription }}</p>
         <ul class="experience-card__technologies">
             <cvv-tag *ngFor="let technology of experience.technologies" [label]="technology"></cvv-tag>

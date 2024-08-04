@@ -9,9 +9,9 @@
     border-radius: 9999px;
     padding: tools.layout-spacing(.5) tools.layout-spacing(2);
     margin: tools.layout-spacing(.75) tools.layout-spacing(.5) tools.layout-spacing(.75) 0;
-    background-color: rgb(from var(--electric-highlight) r g b / 10%);
+    background-color: rgb(var(--electric-highlight) / 10%);
 
-    color: var(--electric-highlight);
+    color: rgb(var(--electric-highlight) / var(--base-opacity));
     font-size: .75rem;
     font-weight: 500;
   }
