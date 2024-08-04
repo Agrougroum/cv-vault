@@ -1,0 +1,15 @@
+<div class="experience-card">
+    <header class="experience-card__period">
+        {{ experience.period }}
+    </header>
+    <div class="experience-card__content">
+        <h3>{{ experience.title }}</h3>
+        <p class="experience-card__description">{{ experience.mainDescription }}</p>
+        <ul class="experience-card__technologies">
+            <cvv-tag *ngFor="let technology of experience.technologies" [label]="technology"></cvv-tag>
+        </ul>
+    </div>
+
+
+
+</div>

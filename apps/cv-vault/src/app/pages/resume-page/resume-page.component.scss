@@ -35,11 +35,12 @@
 
   &__right-panel {
     display: flex;
+    flex-direction: column;
     padding-top: tools.layout-spacing(15);
   }
 
   &__cursor-halo {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;

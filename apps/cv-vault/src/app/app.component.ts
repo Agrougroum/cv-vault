@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ResumePageComponent } from './pages/resume-page/resume-page.component';
 
@@ -8,6 +8,7 @@ import { ResumePageComponent } from './pages/resume-page/resume-page.component';
   selector: 'cvv-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   title = 'cv-vault';

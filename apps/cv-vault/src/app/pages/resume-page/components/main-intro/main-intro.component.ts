@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'cvv-main-intro',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './main-intro.component.html',
   styleUrl: './main-intro.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainIntroComponent {}
+export class MainIntroComponent { }

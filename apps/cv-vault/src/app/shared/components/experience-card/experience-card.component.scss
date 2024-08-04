@@ -1,0 +1,29 @@
+@use '../../css/css-tools/' as tools;
+
+:host {
+  display: block;
+}
+
+.experience-card {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: tools.layout-spacing(2);
+  cursor: pointer;
+  margin-top: tools.layout-spacing(3);
+
+  &__period {
+    grid-column: span 2 / span 2;
+    margin: tools.layout-spacing(1) 0;
+    color: var(--discrete-color);
+    font-size: .75rem;
+    font-weight: 600;
+  }
+
+  &__content {
+    grid-column: span 6 / span 6;
+  }
+
+  &__description {
+    font-size: .875rem;
+  }
+}
